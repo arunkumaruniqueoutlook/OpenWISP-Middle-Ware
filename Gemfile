@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "sinatra"
+gem "sinatra", ">= 2.0.0"
 
 gem "activemodel", :require => 'active_model'
 gem "activeresource", :require => 'active_resource'
@@ -15,13 +15,13 @@ gem 'capistrano_colors', '~> 0.5.4', :require => false
 
 group :development do
   ### Use shotgun to run server in development ###
-  gem "shotgun"
+  gem "shotgun", ">= 0.9.1"
 end
 
 group :test do
   ### Required for testing
   gem 'rake'
   gem 'test-unit', :require => 'test/unit'
-  gem 'rack-test', :require => 'rack/test'
+  gem 'rack-test', '>= 0.6.1', :require => 'rack/test'
   gem 'mocha'
 end
